@@ -1,40 +1,62 @@
 {
   "schemaVersion": 1,
-  "status": "ready",
-  "verification": "mock-only",
-  "releaseEligible": true,
-  "maintainer": "jannikco",
-  "license": "MIT",
-  "sourceRevision": "bb206219009e85625ca198d58e3d617d4d31f88e5d36b43c567b824858022904",
-  "evidence": [
-    "Source-backed provider setup metadata",
-    "Offline configuration and MCP protocol tests"
-  ],
-  "provenance": [
-    "https://api.adversus.io/swagger/apinew.json"
-  ],
   "id": "adversus-dialer-mcp",
   "kind": "mcp-setup",
   "product": "pipmcp",
   "title": "Adversus Dialer MCP setup and connection checker",
-  "description": "Generate Adversus Dialer MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "description": "Prepare Adversus Dialer for AI workflows with a PipMCP setup doctor, authenticated discovery and coding-agent instructions.",
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": false,
   "operationIds": [],
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "attributionSlug": "github-adversus-dialer-mcp",
+  "sourceRevision": "bdbb614888b5996183b7f8ec214c7726c8d155bb08b84bb20274ed78b15f09e8",
+  "qualityVersion": 2,
+  "artifactType": "setup",
+  "evidence": [
+    "Gateway HTTP transport fixtures",
+    "Generated stdio wrapper discovery/call fixtures"
+  ],
+  "provenance": [
+    "https://api.adversus.io/swagger/apinew.json"
+  ],
+  "utility": {
+    "problem": "Prepare Adversus Dialer and inspect your hosted setup",
+    "output": "Offline setup plan and authenticated discovery diagnostics"
+  },
   "appSlug": "adversus-dialer",
   "appName": "Adversus Dialer",
-  "providerDocs": "https://api.adversus.io/swagger/apinew.json",
-  "providerWebsite": "https://www.adversus.io/",
-  "authentication": {
-    "type": "basic",
-    "requiredCredentialFields": [
-      "username",
-      "password"
-    ],
-    "requiredHeaderNames": [],
-    "helpUrl": "https://help.adversus.io/en/articles/5781-create-an-api-user",
-    "tenantRequired": false,
-    "accountParameterNames": []
+  "maintenanceOnly": true,
+  "executionAuthority": "pipmcp-gateway",
+  "version": "1.0.0",
+  "agentReady": true,
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "gateway_transport",
+          "level": "Tested",
+          "method": "contract-fixture",
+          "evidenceRefs": [
+            "Generated gateway/stdio fixtures"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "Generated gateway/stdio fixtures"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
   },
-  "attributionSlug": "github-adversus-dialer-mcp",
   "factory": "leadadapter-pipmcp",
-  "generatorVersion": 1
+  "generatorVersion": 3
 }
